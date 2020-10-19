@@ -4,6 +4,12 @@ Chiedere all'utente il suo cognome e inserirlo nella lista dei cognomi.
 Stampare la lista dei cognomi in ordine alfabetico e comunicare all'utente la posizione in cui si trova il suo cognome (dopo averlo riordinato).
 */
 
+
+
+/*
+PRIMA SOLUZIONE
+
+
 // CREO UN ARRAY CON DEI COGNOMI
 var surname_list = ['rossi', 'verdi', 'brown', 'brambilla', 'brambillafumagalli', 'gialli', 'arancioni'];
 // console.log(surname_list);
@@ -20,5 +26,24 @@ console.log(surname_list.sort());
 
 
 // COMUNICO LA POSIZIONE DEL COGNOME IN ORDINE ALFABETICO
+var user_surname_position = surname_list.indexOf(user_surname);
+console.log('il tuo cognome è alla posizione ' + user_surname_position);
+
+
+FINE PRIMA SOLUZIONE
+*/
+
+
+
+// SECONDA SOLUZIONE
+
+var surname_list = ['Rossi', 'Verdi', 'Brown', 'Brambilla', 'Brambillafumagalli', 'Gialli', 'Arancioni'];
+var user_surname = prompt('Inserisci il tuo cognome');
+surname_list.push(user_surname);
+
+for (var i = 0; i < surname_list.length; i++) {
+    console.log(surname_list.sort()[i]);
+}
+
 var user_surname_position = surname_list.indexOf(user_surname);
 console.log('il tuo cognome è alla posizione ' + user_surname_position);
